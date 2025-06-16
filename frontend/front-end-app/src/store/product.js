@@ -11,7 +11,6 @@ export const useProductStore = create((set) => ({
     }
 
   
-
     const res = await fetch("/api/products",{
         method: "POST",
         headers:{

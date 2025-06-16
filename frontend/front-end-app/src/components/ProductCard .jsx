@@ -53,10 +53,6 @@ const ProductCard = ({ product }) => {
       });
     }
   };
-  // const handleUpdateProduct = async(pid , updatedProduct)=>{
-  // const {success,  message} =  await updateProduct(pid, updatedProduct);
-  // onClose()
-  // } 
   const handleUpdateProduct = async (pid, updatedProduct) => {
     const { success, message } = await updateProduct(pid, updatedProduct);
   
@@ -80,8 +76,6 @@ const ProductCard = ({ product }) => {
     }
   };
   
-
-
   return (
     <Box
       shadow="lg"
@@ -131,6 +125,7 @@ const ProductCard = ({ product }) => {
           <ModalBody>
 
             <VStack spacing={4}>
+            
               <Input placeholder="Product Name" name="name"
               value={updatedProduct.name}
               onChange={(e) => setUpdatedProduct({...updatedProduct, name:  e.target.value})}
